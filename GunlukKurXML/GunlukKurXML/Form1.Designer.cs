@@ -33,6 +33,7 @@
             this.DGridKurlar = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CBoxKurTuru = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGridKurlar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,11 +81,26 @@
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
+            // CBoxKurTuru
+            // 
+            this.CBoxKurTuru.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.CBoxKurTuru.FormattingEnabled = true;
+            this.CBoxKurTuru.Items.AddRange(new object[] {
+            "Dolar",
+            "Euro",
+            "Pound"});
+            this.CBoxKurTuru.Location = new System.Drawing.Point(46, 23);
+            this.CBoxKurTuru.Name = "CBoxKurTuru";
+            this.CBoxKurTuru.Size = new System.Drawing.Size(121, 28);
+            this.CBoxKurTuru.TabIndex = 3;
+            this.CBoxKurTuru.SelectedIndexChanged += new System.EventHandler(this.CBoxSelected);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 377);
+            this.Controls.Add(this.CBoxKurTuru);
             this.Controls.Add(this.DGridKurlar);
             this.Controls.Add(this.btnGetir);
             this.Controls.Add(this.label1);
@@ -104,6 +120,7 @@
         private System.Windows.Forms.DataGridView DGridKurlar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.ComboBox CBoxKurTuru;
     }
 }
 
